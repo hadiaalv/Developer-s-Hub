@@ -179,7 +179,9 @@ if st.button("Check News"):
 with open("streamlit_app.py", "w") as f:
     f.write(code)
 
-!ngrok config add-authtoken 2vzIoU44gSiCWMfB58bGCz6Tdoj_5nHhSiPnpKhHccMNH4e8A
+import subprocess
+subprocess.run(["ngrok", "config", "add-authtoken", "2vzIoU44gSiCWMfB58bGCz6Tdoj_5nHhSiPnpKhHccMNH4e8A"])
+
 
 from pyngrok import ngrok
 import os
